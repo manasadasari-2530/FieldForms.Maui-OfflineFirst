@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfflineFormApp.Views.DynamicFormPage"
+             Title="SelectionProcessPage"
+             BackgroundColor="#F8F9FA">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <!-- App Header Container -->
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         Spacing="20">
+                <Image Source="inspection_icon.png" 
+                       HeightRequest="48" 
+                       WidthRequest="48"
+                       Aspect="AspectFit"/>
+                <Label Text="Vehicle Inspection Form"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#2A3F54"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+            <Label Text="Please fill in all required fields."
+                   FontSize="16"
+                   TextColor="#6C757D"
+                   HorizontalOptions="Center"/>
+
+            <!-- Small-Width Form (centered, but not full width) -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Frame
+                    BackgroundColor="White"
+                    CornerRadius="16"
+                    HasShadow="True"
+                    BorderColor="#E9ECEF"
+                    Padding="25"
+                    WidthRequest="360"
+                    Margin="0,10,0,20">
+                    <VerticalStackLayout x:Name="FormLayout" Spacing="20"/>
+                </Frame>
+            </HorizontalStackLayout>
+
+            <!-- Submit Button -->
+            <Button Text="SUBMIT REPORT"
+                    BackgroundColor="#2A3F54"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    FontSize="18"
+                    HeightRequest="58"
+                    WidthRequest="280"
+                    Padding="0"
+                    Clicked="OnSubmitClicked"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"/>
+
+            <!-- Status/Feedback Label -->
+            <Label x:Name="StatusLabel"
+                   FontSize="16"
+                   TextColor="#6C757D"
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

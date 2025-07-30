@@ -1,0 +1,27 @@
+{
+  "formName": "Vehicle Inspection",
+  "fields": [
+    {
+      "label": "Inspector Name",
+      "type": "entry",
+      "binding": "InspectorName",
+      "required": true
+    },
+    {
+      "label": "Vehicle Manufacturer",
+      "type": "picker",
+      "dataSource": "https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json",
+      "binding": "Manufacturer"
+    },
+    {
+      "label": "Is the vehicle damaged?",
+      "type": "checkbox",
+      "binding": "IsDamaged"
+    },
+    {
+      "label": "Inspection Date",
+      "type": "date",
+      "binding": "InspectionDate"
+    }
+  ]
+}
